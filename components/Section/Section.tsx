@@ -1,8 +1,9 @@
-import { FC, PropsWithChildren, useContext } from "react";
-import { LevelContext } from "../../context/LevelContext";
+import * as React from 'react';
+import { FC, PropsWithChildren, useContext } from 'react';
+import { LevelContext } from '../../context/LevelContext';
 
 export const Section: FC<PropsWithChildren<Record<never, any>>> = ({
-  children
+  children,
 }) => {
   const level = useContext(LevelContext);
 

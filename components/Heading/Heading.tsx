@@ -1,8 +1,9 @@
-import { FC, PropsWithChildren, useContext } from "react";
-import { LevelContext } from "../../context/LevelContext";
+import * as React from 'react';
+import { FC, PropsWithChildren, useContext } from 'react';
+import { LevelContext } from '../../context/LevelContext';
 
 export const Heading: FC<PropsWithChildren<Record<never, any>>> = ({
-  children
+  children,
 }) => {
   const level = useContext(LevelContext);
   switch (level) {
@@ -19,6 +20,6 @@ export const Heading: FC<PropsWithChildren<Record<never, any>>> = ({
     case 6:
       return <h6>{children}</h6>;
     default:
-      throw Error("Unknown level: " + level);
+      throw Error('Unknown level: ' + level);
   }
 };
